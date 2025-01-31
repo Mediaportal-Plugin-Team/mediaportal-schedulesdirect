@@ -15,7 +15,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -32,6 +32,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <SourceAnalysisOverrideSettingsFile>C:\Users\geoff\AppData\Roaming\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +46,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Plugins\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,55 +56,33 @@
     <StartAction>Program</StartAction>
     <StartProgram>..\..\..\..\Program Files %28x86%29\Team MediaPortal\MediaPortal TV Server\SetupTv.exe</StartProgram>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Common.Utils">
-      <HintPath>..\mplib\Common.Utils.dll</HintPath>
+      <HintPath>..\Externals\Common.Utils.dll</HintPath>
     </Reference>
-    <Reference Include="DirectShowLib, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DirectShowLib">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\DirectShowLib.dll</HintPath>
+      <HintPath>..\Externals\DirectShowLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Gentle.Common, Version=1.2.9.1285, Culture=neutral, PublicKeyToken=80b5de62e27be49b">
+    <Reference Include="Gentle.Common">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\Gentle.Common.dll</HintPath>
+      <HintPath>..\Externals\Gentle.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Gentle.Framework, Version=1.2.9.1286, Culture=neutral, PublicKeyToken=80b5de62e27be49b">
+    <Reference Include="Gentle.Framework">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\Gentle.Framework.dll</HintPath>
+      <HintPath>..\Externals\Gentle.Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="PluginBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="PluginBase">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\PluginBase.dll</HintPath>
+      <HintPath>..\Externals\PluginBase.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SetupControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SetupControls">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\SetupControls.dll</HintPath>
+      <HintPath>..\Externals\SetupControls.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -114,27 +93,27 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TvBusinessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TvBusinessLayer">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\TvBusinessLayer.dll</HintPath>
+      <HintPath>..\Externals\TvBusinessLayer.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="TvControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TvControl">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\TvControl.dll</HintPath>
+      <HintPath>..\Externals\TvControl.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="TVDatabase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TVDatabase">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\TVDatabase.dll</HintPath>
+      <HintPath>..\Externals\TVDatabase.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="TvdbLib">
-      <HintPath>..\lib\TvdbLib.dll</HintPath>
+      <HintPath>..\Externals\TvdbLib.dll</HintPath>
     </Reference>
-    <Reference Include="TvLibrary.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TvLibrary.Interfaces">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\mplib\TvLibrary.Interfaces.dll</HintPath>
+      <HintPath>..\Externals\TvLibrary.Interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -172,23 +151,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PackageClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PackageClass xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Version>2.0</Version>
   <Groups>
     <Items>
@@ -10,17 +10,17 @@
         <Description>Default</Description>
         <Files>
           <Items>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
               <Param1 />
               <UpdateOption>AlwaysOverwrite</UpdateOption>
-              <LocalFileName>..\..\SchedulesDirectPluginTVE3\obj\Debug\SchedulesDirectPluginTVE3.dll</LocalFileName>
+              <LocalFileName>..\SchedulesDirectPluginTVE3\bin\Release\SchedulesDirectPluginTVE3.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{0b4aa39b-b4bd-4af4-a9eb-a5240fac4c6a}-SchedulesDirectPluginTVE3.dll</ZipFileName>
               <DestinationFilename>%TvServerPlugins%\SchedulesDirectPluginTVE3.dll</DestinationFilename>
             </FileItem>
-            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
               <Param1 />
               <UpdateOption>AlwaysOverwrite</UpdateOption>
-              <LocalFileName>..\..\lib\TvdbLib.dll</LocalFileName>
+              <LocalFileName>..\SchedulesDirectPluginTVE3\bin\Release\TvdbLib.dll</LocalFileName>
               <ZipFileName>Installer{CopyFile}\{d38b1c5b-f6ef-46c4-ae30-a173b26a179d}-TvdbLib.dll</ZipFileName>
               <DestinationFilename>%TvServerBase%\TvdbLib.dll</DestinationFilename>
             </FileItem>
@@ -31,7 +31,7 @@
   </Groups>
   <Sections>
     <Items>
-      <SectionItem Guid="f34066ac-23f5-44c7-9d42-7375d70f86f2" Name="Welcome Screen" ConditionGroup="">
+      <SectionItem Guid="f34066ac-23f5-44c7-9d42-7375d70f86f2" Name="Welcome Screen" ConditionGroup="" Condition="None">
         <Params>
           <Items>
             <SectionParam Name="Header text">
@@ -65,7 +65,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <PanelName>Welcome Screen</PanelName>
         <WizardButtonsEnum>NextCancel</WizardButtonsEnum>
       </SectionItem>
-      <SectionItem Guid="f4bde32a-c32e-475b-8b75-436aec7ec10c" Name="Install Section" ConditionGroup="">
+      <SectionItem Guid="f4bde32a-c32e-475b-8b75-436aec7ec10c" Name="Install Section" ConditionGroup="" Condition="None">
         <Params>
           <Items>
             <SectionParam Name="Header Title">
@@ -87,7 +87,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         </Params>
         <Actions>
           <Items>
-            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
+            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="" Condition="None">
               <Params>
                 <Items />
               </Params>
@@ -99,7 +99,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
         <PanelName>Install Section</PanelName>
         <WizardButtonsEnum>Next</WizardButtonsEnum>
       </SectionItem>
-      <SectionItem Guid="de08af7d-c460-4192-bd47-17d291d04f51" Name="Setup Complete" ConditionGroup="">
+      <SectionItem Guid="de08af7d-c460-4192-bd47-17d291d04f51" Name="Setup Complete" ConditionGroup="" Condition="None">
         <Params>
           <Items>
             <SectionParam Name="Header text">
@@ -146,32 +146,34 @@ Click Next to continue or Cancel to exit Setup.</Value>
         </MinVersion>
         <MaxVersion>
           <Major>1</Major>
-          <Minor>15</Minor>
+          <Minor>*</Minor>
           <Build>*</Build>
           <Revision>*</Revision>
         </MaxVersion>
         <WarnOnly>true</WarnOnly>
-        <Message>requires TvServer version 1.3.*.* or higher</Message>
+        <Message>Requires TvServer from 1.3.*.* to 1.*.*.*!</Message>
         <Name>TvServer</Name>
+        <Condition>None</Condition>
       </DependencyItem>
       <DependencyItem>
         <Type>MediaPortal</Type>
         <Id />
         <MinVersion>
-          <Major>1</Major>
-          <Minor>1</Minor>
-          <Build>6</Build>
-          <Revision>27644</Revision>
+          <Major>*</Major>
+          <Minor>*</Minor>
+          <Build>*</Build>
+          <Revision>*</Revision>
         </MinVersion>
         <MaxVersion>
-          <Major>1</Major>
-          <Minor>1</Minor>
-          <Build>6</Build>
-          <Revision>27644</Revision>
+          <Major>*</Major>
+          <Minor>*</Minor>
+          <Build>*</Build>
+          <Revision>*</Revision>
         </MaxVersion>
         <WarnOnly>true</WarnOnly>
-        <Message>This version of SchedulesDirect Plugin requires MediaPortal 1.2.0 Beta or higher!</Message>
+        <Message />
         <Name>MediaPortal</Name>
+        <Condition>None</Condition>
       </DependencyItem>
     </Items>
   </Dependencies>
@@ -182,28 +184,31 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Name>SchedulesDirect Plugin</Name>
     <Id>e14cf436-6e19-4b40-b65f-3bbc934ae521</Id>
     <Author>Patrick, Geoff Stewart</Author>
-    <HomePage>https://github.com/geoffstewart/mp-schedulesdirect</HomePage>
+    <HomePage>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/threads/schedules-direct-us-canadian-mexico-epg-plugin-updated-august-2010.26951/</ForumPage>
-    <UpdateUrl>https://github.com/geoffstewart/mp-schedulesdirect</UpdateUrl>
+    <UpdateUrl>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect</UpdateUrl>
     <Version>
       <Major>1</Major>
-      <Minor>11</Minor>
+      <Minor>13</Minor>
       <Build>0</Build>
-      <Revision>2</Revision>
+      <Revision>0</Revision>
     </Version>
     <ExtensionDescription>This plugin provides EPG data for users in Canada/US/Mexico.  You need a ScheduleDirect account from schedulesdirect.org ($25/year).
 
 
 
-Plugin originally authored by Patrick.  Currently maintained by geoffstewart.</ExtensionDescription>
+Plugin originally authored by Patrick.
+Maintained by Geoff Stewart.
+Currently maintained by Mediaportal Team.</ExtensionDescription>
     <VersionDescription>Updates new channel column so channels can be changed by inputing the channel number.
 
 Requires user to force guide update in SD plugin settings and then restrart TVService</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://github.com/geoffstewart/mp-schedulesdirect/blob/master/package/SchedulesDirectPlugin-1.11.0.1.mpe1</OnlineLocation>
-    <ReleaseDate>2015-06-27T22:20:42</ReleaseDate>
+    <OnlineLocation>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect/releases/download/v[Version]/SchedulesDirectPlugin-v[Version].mpe1</OnlineLocation>
+    <ReleaseDate>2025-01-31T22:20:42</ReleaseDate>
     <Tags>schedulesdirect, epg, tvdb</Tags>
-    <Location>..\SchedulesDirectPlugin-1.11.0.2.mpe1</Location>
+    <PlatformCompatibility>AnyCPU</PlatformCompatibility>
+    <Location>.\Release\SchedulesDirectPlugin-v[Version].mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -212,7 +217,7 @@ Requires user to force guide update in SD plugin settings and then restrart TVSe
           <Description>The icon file of the package (jpg,png,bmp)</Description>
         </SectionParam>
         <SectionParam Name="Online Icon">
-          <Value>https://mp-schedulesdirect.googlecode.com/svn/trunk/package/mpe1-project/sd.jpg</Value>
+          <Value>https://raw.githubusercontent.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect/refs/heads/master/MPEI/sd.jpg</Value>
           <ValueType>String</ValueType>
           <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
         </SectionParam>
@@ -238,28 +243,28 @@ Requires user to force guide update in SD plugin settings and then restrart TVSe
   </GeneralInfo>
   <UniqueFileList>
     <Items>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
         <Param1 />
         <UpdateOption>AlwaysOverwrite</UpdateOption>
-        <LocalFileName>..\..\SchedulesDirectPluginTVE3\obj\Debug\SchedulesDirectPluginTVE3.dll</LocalFileName>
+        <LocalFileName>..\SchedulesDirectPluginTVE3\bin\Release\SchedulesDirectPluginTVE3.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{0b4aa39b-b4bd-4af4-a9eb-a5240fac4c6a}-SchedulesDirectPluginTVE3.dll</ZipFileName>
         <DestinationFilename>%TvServerPlugins%\SchedulesDirectPluginTVE3.dll</DestinationFilename>
       </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true" Condition="None">
         <Param1 />
         <UpdateOption>AlwaysOverwrite</UpdateOption>
-        <LocalFileName>..\..\lib\TvdbLib.dll</LocalFileName>
+        <LocalFileName>..\SchedulesDirectPluginTVE3\bin\Release\TvdbLib.dll</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{d38b1c5b-f6ef-46c4-ae30-a173b26a179d}-TvdbLib.dll</ZipFileName>
         <DestinationFilename>%TvServerBase%\TvdbLib.dll</DestinationFilename>
       </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true" Condition="None">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>SideImage.jpg</LocalFileName>
         <ZipFileName>Installer{CopyFile}\{1dc4b639-be5f-4d62-86dd-5f51802b94ef}-SideImage.jpg</ZipFileName>
         <DestinationFilename />
       </FileItem>
-      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true">
+      <FileItem InstallType="CopyFile" SystemFile="true" Modified="true" Condition="None">
         <Param1 />
         <UpdateOption>OverwriteIfOlder</UpdateOption>
         <LocalFileName>sd.jpg</LocalFileName>
@@ -271,7 +276,7 @@ Requires user to force guide update in SD plugin settings and then restrart TVSe
   <ProjectSettings>
     <FolderGroups />
     <ProjectFilename>installer.xmp2</ProjectFilename>
-    <UpdatePath1>C:\Users\geoff\Documents\mygit\mp-schedulesdirect\package\update.xml</UpdatePath1>
+    <UpdatePath1>.\update.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>

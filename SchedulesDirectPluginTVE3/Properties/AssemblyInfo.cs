@@ -11,7 +11,7 @@ using MediaPortal.Common.Utils;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SchedulesDirectPluginTVE3")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright © 2015-2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,8 +32,8 @@ using MediaPortal.Common.Utils;
 //
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.11.0.2")]
-[assembly: AssemblyFileVersion("1.11.0.2")]
+[assembly: AssemblyVersion("1.13.0.999")]
+[assembly: AssemblyFileVersion("1.13.0.999")]
 
 [assembly: CompatibleVersion("1.1.6.27644")]
 [assembly: UsesSubsystem("TVE.Scheduler")]
