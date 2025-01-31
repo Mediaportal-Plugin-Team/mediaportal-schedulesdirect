@@ -204,11 +204,11 @@ Currently maintained by Mediaportal Team.</ExtensionDescription>
 
 Requires user to force guide update in SD plugin settings and then restrart TVService</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect/releases/download/v[Version]/SchedulesDirectPlugin-v[Version].mpe1</OnlineLocation>
+    <OnlineLocation>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect/releases/download/v[Version]/SchedulesDirectPluginTVE3-v[Version].mpe1</OnlineLocation>
     <ReleaseDate>2025-01-31T22:20:42</ReleaseDate>
     <Tags>schedulesdirect, epg, tvdb</Tags>
     <PlatformCompatibility>AnyCPU</PlatformCompatibility>
-    <Location>.\Release\SchedulesDirectPlugin-v[Version].mpe1</Location>
+    <Location>.\Release\SchedulesDirectPluginTVE3-v[Version].mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
