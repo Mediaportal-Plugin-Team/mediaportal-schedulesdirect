@@ -122,6 +122,8 @@ namespace SchedulesDirect.Plugin
 
       PluginSettings.TvDbLibCache = textBoxTvDbLibCache.Text;
       
+      PluginSettings.DebugMode = this.checkBoxDebug.Checked;
+
       base.OnSectionDeActivated();
     }
 
@@ -199,6 +201,8 @@ namespace SchedulesDirect.Plugin
       }
 
       textBoxTvDbLibCache.Text = PluginSettings.TvDbLibCache;
+            
+      this.checkBoxDebug.Checked = PluginSettings.DebugMode;
     }
     #endregion
 

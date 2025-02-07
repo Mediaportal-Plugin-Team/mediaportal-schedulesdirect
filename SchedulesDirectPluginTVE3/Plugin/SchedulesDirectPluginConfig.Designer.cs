@@ -152,6 +152,7 @@ namespace SchedulesDirect.Plugin
          this.listBoxSeriesMapping = new System.Windows.Forms.ListBox();
          this.okButton = new System.Windows.Forms.Button();
          this.folderBrowserDialogTvDbCache = new System.Windows.Forms.FolderBrowserDialog();
+         this.checkBoxDebug = new System.Windows.Forms.CheckBox();
          toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
          toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
          groupBoxImportOptions = new System.Windows.Forms.GroupBox();
@@ -377,6 +378,7 @@ namespace SchedulesDirect.Plugin
          // 
          // groupBox5
          // 
+         groupBox5.Controls.Add(this.checkBoxDebug);
          groupBox5.Controls.Add(this.checkBoxAddExtraDataToShowDescription);
          groupBox5.Location = new System.Drawing.Point(6, 313);
          groupBox5.Name = "groupBox5";
@@ -1513,6 +1515,18 @@ namespace SchedulesDirect.Plugin
          this.okButton.UseVisualStyleBackColor = true;
          this.okButton.Visible = false;
          // 
+         // checkBoxDebug
+         // 
+         this.checkBoxDebug.AutoSize = true;
+         this.checkBoxDebug.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+         this.checkBoxDebug.Location = new System.Drawing.Point(338, 15);
+         this.checkBoxDebug.Name = "checkBoxDebug";
+         this.checkBoxDebug.Size = new System.Drawing.Size(86, 17);
+         this.checkBoxDebug.TabIndex = 29;
+         this.checkBoxDebug.Text = "Debug Mode";
+         this.toolTip.SetToolTip(this.checkBoxDebug, "Check this option to enable additional debug logging");
+         this.checkBoxDebug.UseVisualStyleBackColor = true;
+         // 
          // SchedulesDirectPluginConfig
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1681,5 +1695,6 @@ namespace SchedulesDirect.Plugin
       public System.Windows.Forms.FolderBrowserDialog folderBrowserDialogTvDbCache;
       private System.Windows.Forms.LinkLabel labelTvDbComAdvert;
       private System.Windows.Forms.CheckBox checkBoxSeriesId;
+      private System.Windows.Forms.CheckBox checkBoxDebug;
    }
 }
