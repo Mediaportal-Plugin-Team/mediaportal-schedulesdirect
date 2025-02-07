@@ -307,7 +307,7 @@ namespace SchedulesDirect.Plugin
 
         // If debug mode is enabled, write the data to disk for analysis
         if (PluginSettings.DebugMode)
-          WriteXTVD(listingData.Data, String.Format(@"{0}\MediaPortal TV Server\schedulesdirectupdate.xml", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData)));
+          WriteXTVD(listingData.Data, String.Format(@"{0}\Team MediaPortal\MediaPortal TV Server\schedulesdirectupdate.xml", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData)));
         //WriteXTVD(listingData.Data, @"log\schedulesdirectupdate.xml");
 
         // Instantiate an EPG listing importer to do the actual import work
@@ -411,7 +411,7 @@ namespace SchedulesDirect.Plugin
 
         // If debug mode is enabled, write the data to disk for analysis
         if (PluginSettings.DebugMode)
-          WriteXTVD(listingData.Data, String.Format(@"{0}\MediaPortal TV Server\SchedulesDirect.xml", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData)));
+          WriteXTVD(listingData.Data, String.Format(@"{0}\Team MediaPortal\MediaPortal TV Server\SchedulesDirect.xml", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData)));
         //WriteXTVD(listingData.Data, @"log\SchedulesDirect.xml");
 
         using (Import.EpgListingsImporter epgListingsImporter = new Import.EpgListingsImporter(listingData))
