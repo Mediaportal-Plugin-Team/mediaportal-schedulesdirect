@@ -186,7 +186,7 @@ Click Next to continue or Cancel to exit Setup.</Value>
     <Author>Patrick, Geoff Stewart</Author>
     <HomePage>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect</HomePage>
     <ForumPage>http://forum.team-mediaportal.com/threads/schedules-direct-us-canadian-mexico-epg-plugin-updated-august-2010.26951/</ForumPage>
-    <UpdateUrl>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect</UpdateUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect/master/MPEI/update.xml</UpdateUrl>
     <Version>
       <Major>1</Major>
       <Minor>13</Minor>
@@ -205,7 +205,7 @@ Currently maintained by Mediaportal Team.</ExtensionDescription>
 Requires user to force guide update in SD plugin settings and then restrart TVService</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
     <OnlineLocation>https://github.com/Mediaportal-Plugin-Team/mediaportal-schedulesdirect/releases/download/v[Version]/SchedulesDirectPluginTVE3-v[Version].mpe1</OnlineLocation>
-    <ReleaseDate>2025-01-31T22:20:42</ReleaseDate>
+    <ReleaseDate>2025-03-20T22:20:42</ReleaseDate>
     <Tags>schedulesdirect, epg, tvdb</Tags>
     <PlatformCompatibility>AnyCPU</PlatformCompatibility>
     <Location>.\Release\SchedulesDirectPluginTVE3-v[Version].mpe1</Location>
@@ -275,7 +275,7 @@ Requires user to force guide update in SD plugin settings and then restrart TVSe
   </UniqueFileList>
   <ProjectSettings>
     <FolderGroups />
-    <ProjectFilename>installer.xmp2</ProjectFilename>
+    <ProjectFilename>Installer.xmp2</ProjectFilename>
     <UpdatePath1>.\update.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
